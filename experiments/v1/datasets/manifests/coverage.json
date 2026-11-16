@@ -1,0 +1,37 @@
+{
+  "89": {
+    "total": 16,
+    "positive": 5,
+    "negative": 11,
+    "transformable": 5,
+    "transformable_ids": [
+      "BenchmarkTest00099",
+      "BenchmarkTest00283",
+      "BenchmarkTest00455",
+      "BenchmarkTest00284",
+      "BenchmarkTest00454"
+    ],
+    "syntax_incompatible": []
+  },
+  "78": {
+    "total": 20,
+    "positive": 13,
+    "negative": 7,
+    "transformable": 0,
+    "transformable_ids": [],
+    "syntax_incompatible": []
+  },
+  "94": {
+    "total": 53,
+    "positive": 20,
+    "negative": 33,
+    "transformable": 0,
+    "transformable_ids": [],
+    "syntax_incompatible": [
+      "BenchmarkTest00986",
+      "BenchmarkTest00987",
+      "BenchmarkTest00988",
+      "BenchmarkTest00989"
+    ]
+  }
+}

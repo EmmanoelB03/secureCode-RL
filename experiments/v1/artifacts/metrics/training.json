@@ -1,0 +1,194 @@
+{
+  "runs": [
+    {
+      "seed": 42,
+      "config": {
+        "alpha": 0.1,
+        "gamma": 0.95,
+        "epsilon": 1.0,
+        "epsilon_min": 0.05,
+        "epsilon_decay": 0.995,
+        "episodes": 10000,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "max_steps": 6,
+        "rewards": {
+          "validated": 10,
+          "complete": 15,
+          "functional": 3,
+          "incompatible": -5,
+          "regression": -12,
+          "unnecessary": -6,
+          "unfinished": -8,
+          "cost": -1
+        }
+      },
+      "episodes": 10000,
+      "dataset_commit": "f1291485808b66e20ddb6b01b10dc71b3df8c8ba",
+      "manifest_sha256": "c5f0b6086ccb56b96937830846c18c2b7670749a064fdebd1ab0f71f130942ed",
+      "validation": {
+        "examples": 16,
+        "positives": 7,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.14285714285714285,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.125,
+        "mean_reward": -0.5,
+        "unsupported": 6,
+        "actions": {
+          "STOP": 16,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "python": "3.11.15",
+      "dimensions": [
+        8,
+        4,
+        5,
+        7,
+        2,
+        4,
+        2
+      ],
+      "state_schema": 1,
+      "epsilon_final": 0.05
+    },
+    {
+      "seed": 43,
+      "config": {
+        "alpha": 0.1,
+        "gamma": 0.95,
+        "epsilon": 1.0,
+        "epsilon_min": 0.05,
+        "epsilon_decay": 0.995,
+        "episodes": 10000,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "max_steps": 6,
+        "rewards": {
+          "validated": 10,
+          "complete": 15,
+          "functional": 3,
+          "incompatible": -5,
+          "regression": -12,
+          "unnecessary": -6,
+          "unfinished": -8,
+          "cost": -1
+        }
+      },
+      "episodes": 10000,
+      "dataset_commit": "f1291485808b66e20ddb6b01b10dc71b3df8c8ba",
+      "manifest_sha256": "c5f0b6086ccb56b96937830846c18c2b7670749a064fdebd1ab0f71f130942ed",
+      "validation": {
+        "examples": 16,
+        "positives": 7,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.14285714285714285,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.125,
+        "mean_reward": -0.5,
+        "unsupported": 6,
+        "actions": {
+          "STOP": 16,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "python": "3.11.15",
+      "dimensions": [
+        8,
+        4,
+        5,
+        7,
+        2,
+        4,
+        2
+      ],
+      "state_schema": 1,
+      "epsilon_final": 0.05
+    },
+    {
+      "seed": 44,
+      "config": {
+        "alpha": 0.1,
+        "gamma": 0.95,
+        "epsilon": 1.0,
+        "epsilon_min": 0.05,
+        "epsilon_decay": 0.995,
+        "episodes": 10000,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "max_steps": 6,
+        "rewards": {
+          "validated": 10,
+          "complete": 15,
+          "functional": 3,
+          "incompatible": -5,
+          "regression": -12,
+          "unnecessary": -6,
+          "unfinished": -8,
+          "cost": -1
+        }
+      },
+      "episodes": 10000,
+      "dataset_commit": "f1291485808b66e20ddb6b01b10dc71b3df8c8ba",
+      "manifest_sha256": "c5f0b6086ccb56b96937830846c18c2b7670749a064fdebd1ab0f71f130942ed",
+      "validation": {
+        "examples": 16,
+        "positives": 7,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.14285714285714285,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.125,
+        "mean_reward": -0.5,
+        "unsupported": 6,
+        "actions": {
+          "STOP": 16,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "python": "3.11.15",
+      "dimensions": [
+        8,
+        4,
+        5,
+        7,
+        2,
+        4,
+        2
+      ],
+      "state_schema": 1,
+      "epsilon_final": 0.05
+    }
+  ],
+  "selected_seed": 42
+}

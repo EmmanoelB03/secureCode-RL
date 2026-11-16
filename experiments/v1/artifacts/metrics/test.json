@@ -1,0 +1,4394 @@
+{
+  "split": "test",
+  "detection": {
+    "89": {
+      "tp": 1,
+      "fp": 0,
+      "tn": 1,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "78": {
+      "tp": 1,
+      "fp": 1,
+      "tn": 0,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "fpr": 1.0,
+      "fnr": 0.0
+    },
+    "94": {
+      "tp": 2,
+      "fp": 4,
+      "tn": 3,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.6666666666666666,
+      "f1": 0.4444444444444444,
+      "fpr": 0.5714285714285714,
+      "fnr": 0.3333333333333333
+    }
+  },
+  "experiments": [
+    {
+      "id": "test-random-42",
+      "policy": "random",
+      "seed": 42,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 0,
+        "validated_correction_rate": 0.0,
+        "treatable_correction_rate": 0.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 3.857142857142857,
+        "mean_reward": -19.785714285714285,
+        "unsupported": 4,
+        "actions": {
+          "FIX_SQL_INJECTION": 10,
+          "VALIDATE": 15,
+          "FIX_CODE_INJECTION": 13,
+          "STOP": 10,
+          "FIX_COMMAND_INJECTION": 6
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": 0.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 5.0,
+          "mean_reward": -29.0,
+          "unsupported": 0,
+          "actions": {
+            "VALIDATE": 6,
+            "FIX_CODE_INJECTION": 2,
+            "FIX_SQL_INJECTION": 1,
+            "STOP": 1
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 6.0,
+          "mean_reward": -33.5,
+          "unsupported": 1,
+          "actions": {
+            "FIX_SQL_INJECTION": 3,
+            "VALIDATE": 4,
+            "FIX_COMMAND_INJECTION": 2,
+            "FIX_CODE_INJECTION": 2,
+            "STOP": 1
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.2,
+          "mean_reward": -15.2,
+          "unsupported": 3,
+          "actions": {
+            "FIX_SQL_INJECTION": 6,
+            "VALIDATE": 5,
+            "FIX_CODE_INJECTION": 9,
+            "STOP": 8,
+            "FIX_COMMAND_INJECTION": 4
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -31.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -31.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": false,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -39.0,
+          "pending": true,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -9
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 5,
+          "reward": -25.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 4,
+          "reward": -19.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-rule_based-42",
+      "policy": "rule_based",
+      "seed": 42,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.1428571428571428,
+        "mean_reward": -0.42857142857142855,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 14,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 10
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-q_learning-42",
+      "policy": "q_learning",
+      "seed": 42,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 2.5714285714285716,
+        "mean_reward": -10.428571428571429,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 10,
+          "FIX_SQL_INJECTION": 25,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.0,
+          "mean_reward": -15.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 6,
+            "FIX_SQL_INJECTION": 24
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-random-43",
+      "policy": "random",
+      "seed": 43,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 0,
+        "validated_correction_rate": 0.0,
+        "treatable_correction_rate": 0.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 3.2142857142857144,
+        "mean_reward": -15.928571428571429,
+        "unsupported": 4,
+        "actions": {
+          "FIX_CODE_INJECTION": 14,
+          "VALIDATE": 4,
+          "FIX_SQL_INJECTION": 6,
+          "FIX_COMMAND_INJECTION": 10,
+          "STOP": 11
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": 0.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.0,
+          "mean_reward": -17.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_CODE_INJECTION": 3,
+            "STOP": 2,
+            "FIX_SQL_INJECTION": 1
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.5,
+          "mean_reward": -4.0,
+          "unsupported": 1,
+          "actions": {
+            "FIX_COMMAND_INJECTION": 1,
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.6,
+          "mean_reward": -18.1,
+          "unsupported": 3,
+          "actions": {
+            "FIX_CODE_INJECTION": 11,
+            "VALIDATE": 4,
+            "FIX_SQL_INJECTION": 5,
+            "FIX_COMMAND_INJECTION": 9,
+            "STOP": 7
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -21.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -9
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -13.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 5,
+          "reward": -25.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 5,
+          "reward": -25.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-rule_based-43",
+      "policy": "rule_based",
+      "seed": 43,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.1428571428571428,
+        "mean_reward": -0.42857142857142855,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 14,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 10
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-q_learning-43",
+      "policy": "q_learning",
+      "seed": 43,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 2.5714285714285716,
+        "mean_reward": -10.428571428571429,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 10,
+          "FIX_SQL_INJECTION": 25,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.0,
+          "mean_reward": -15.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 6,
+            "FIX_SQL_INJECTION": 24
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-random-44",
+      "policy": "random",
+      "seed": 44,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 0,
+        "validated_correction_rate": 0.0,
+        "treatable_correction_rate": 0.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 3.142857142857143,
+        "mean_reward": -14.785714285714286,
+        "unsupported": 4,
+        "actions": {
+          "VALIDATE": 8,
+          "FIX_SQL_INJECTION": 10,
+          "STOP": 12,
+          "FIX_COMMAND_INJECTION": 3,
+          "FIX_CODE_INJECTION": 11
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": 0.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.5,
+          "mean_reward": -17.5,
+          "unsupported": 0,
+          "actions": {
+            "FIX_CODE_INJECTION": 2,
+            "FIX_SQL_INJECTION": 1,
+            "STOP": 2,
+            "VALIDATE": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 4.0,
+          "mean_reward": -19.0,
+          "unsupported": 1,
+          "actions": {
+            "FIX_COMMAND_INJECTION": 1,
+            "VALIDATE": 2,
+            "FIX_CODE_INJECTION": 1,
+            "FIX_SQL_INJECTION": 2,
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.9,
+          "mean_reward": -13.4,
+          "unsupported": 3,
+          "actions": {
+            "VALIDATE": 4,
+            "FIX_SQL_INJECTION": 7,
+            "STOP": 8,
+            "FIX_COMMAND_INJECTION": 2,
+            "FIX_CODE_INJECTION": 8
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -13.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 5,
+          "reward": -25.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": false,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -16.0,
+          "pending": true,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -9
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 4,
+          "reward": -19.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 4,
+          "reward": -19.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_COMMAND_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -13.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "FIX_CODE_INJECTION",
+              "outcome": "unsupported",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 2,
+          "reward": -7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": -13.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-rule_based-44",
+      "policy": "rule_based",
+      "seed": 44,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 1.1428571428571428,
+        "mean_reward": -0.42857142857142855,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 14,
+          "FIX_SQL_INJECTION": 1,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 10
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-q_learning-44",
+      "policy": "q_learning",
+      "seed": 44,
+      "split": "test",
+      "metrics": {
+        "examples": 14,
+        "positives": 5,
+        "negatives": 9,
+        "treatable": 1,
+        "validated": 1,
+        "validated_correction_rate": 0.2,
+        "treatable_correction_rate": 1.0,
+        "unnecessary_change_rate": 0.0,
+        "functional_regression_rate": null,
+        "functional_verified_cases": 0,
+        "full_success_rate": null,
+        "mean_actions": 2.5714285714285716,
+        "mean_reward": -10.428571428571429,
+        "unsupported": 4,
+        "actions": {
+          "STOP": 10,
+          "FIX_SQL_INJECTION": 25,
+          "VALIDATE": 1
+        }
+      },
+      "by_cwe": {
+        "89": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 1,
+          "validated": 1,
+          "validated_correction_rate": 1.0,
+          "treatable_correction_rate": 1.0,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 2.0,
+          "mean_reward": 3.0,
+          "unsupported": 0,
+          "actions": {
+            "FIX_SQL_INJECTION": 1,
+            "VALIDATE": 1,
+            "STOP": 2
+          }
+        },
+        "78": {
+          "examples": 2,
+          "positives": 1,
+          "negatives": 1,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 1.0,
+          "mean_reward": -1.0,
+          "unsupported": 1,
+          "actions": {
+            "STOP": 2
+          }
+        },
+        "94": {
+          "examples": 10,
+          "positives": 3,
+          "negatives": 7,
+          "treatable": 0,
+          "validated": 0,
+          "validated_correction_rate": 0.0,
+          "treatable_correction_rate": null,
+          "unnecessary_change_rate": 0.0,
+          "functional_regression_rate": null,
+          "functional_verified_cases": 0,
+          "full_success_rate": null,
+          "mean_actions": 3.0,
+          "mean_reward": -15.0,
+          "unsupported": 3,
+          "actions": {
+            "STOP": 6,
+            "FIX_SQL_INJECTION": 24
+          }
+        }
+      },
+      "episodes": [
+        {
+          "id": "BenchmarkTest00423",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00432",
+          "cwe": 78,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00454",
+          "cwe": 89,
+          "vulnerable": true,
+          "treatable": true,
+          "unsupported": false,
+          "validated": true,
+          "changed": true,
+          "unnecessary": false,
+          "steps": 3,
+          "reward": 7.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "proposed",
+              "reward": -1
+            },
+            {
+              "action": "VALIDATE",
+              "outcome": "validated",
+              "reward": 9
+            },
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00503",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00603",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00755",
+          "cwe": 89,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00820",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00893",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00986",
+          "cwe": 94,
+          "vulnerable": true,
+          "treatable": false,
+          "unsupported": true,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00987",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00988",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest00989",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 6,
+          "reward": -36.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            },
+            {
+              "action": "FIX_SQL_INJECTION",
+              "outcome": "incompatible",
+              "reward": -6
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01166",
+          "cwe": 94,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        },
+        {
+          "id": "BenchmarkTest01173",
+          "cwe": 78,
+          "vulnerable": false,
+          "treatable": false,
+          "unsupported": false,
+          "validated": false,
+          "changed": false,
+          "unnecessary": false,
+          "steps": 1,
+          "reward": -1.0,
+          "pending": false,
+          "functional_verified": false,
+          "trace": [
+            {
+              "action": "STOP",
+              "outcome": "stopped",
+              "reward": -1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "caveat": "Local SQL property only; full functional validation unavailable. Tiny grouped holdout."
+}

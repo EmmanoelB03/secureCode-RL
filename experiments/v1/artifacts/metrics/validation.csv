@@ -1,0 +1,10 @@
+policy,seed,examples,positives,negatives,treatable,validated,validated_correction_rate,treatable_correction_rate,unnecessary_change_rate,functional_regression_rate,functional_verified_cases,full_success_rate,mean_actions,mean_reward,unsupported
+random,42,16,7,9,1,0,0.0,0.0,0.0,,0,,3.8125,-19.625,6
+rule_based,42,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6
+q_learning,42,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6
+random,43,16,7,9,1,0,0.0,0.0,0.0,,0,,3.0625,-14.8125,6
+rule_based,43,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6
+q_learning,43,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6
+random,44,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,3.3125,-14.25,6
+rule_based,44,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6
+q_learning,44,16,7,9,1,1,0.14285714285714285,1.0,0.0,,0,,1.125,-0.5,6

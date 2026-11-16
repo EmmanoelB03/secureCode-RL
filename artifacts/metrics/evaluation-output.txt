@@ -1,0 +1,245 @@
+[
+  {
+    "id": "test-random-42",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 0,
+      "validated_correction_rate": 0.0,
+      "treatable_correction_rate": 0.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 4.415094339622642,
+      "mean_reward": -24.11320754716981,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "FIX_SQL_INJECTION": 31,
+        "FIX_SECURE_COOKIE": 46,
+        "STOP": 30,
+        "VALIDATE": 47,
+        "FIX_RANDOM_BYTES": 23,
+        "FIX_COMMAND_INJECTION": 29,
+        "FIX_CODE_INJECTION": 28
+      }
+    }
+  },
+  {
+    "id": "test-rule_based-42",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  },
+  {
+    "id": "test-q_learning-42",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  },
+  {
+    "id": "test-random-43",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 2,
+      "validated_correction_rate": 0.1,
+      "treatable_correction_rate": 0.6666666666666666,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 3.7169811320754715,
+      "mean_reward": -18.39622641509434,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "VALIDATE": 29,
+        "STOP": 35,
+        "FIX_CODE_INJECTION": 30,
+        "FIX_SQL_INJECTION": 25,
+        "FIX_COMMAND_INJECTION": 26,
+        "FIX_SECURE_COOKIE": 23,
+        "FIX_RANDOM_BYTES": 29
+      }
+    }
+  },
+  {
+    "id": "test-rule_based-43",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  },
+  {
+    "id": "test-q_learning-43",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  },
+  {
+    "id": "test-random-44",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 0,
+      "validated_correction_rate": 0.0,
+      "treatable_correction_rate": 0.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 4.226415094339623,
+      "mean_reward": -22.50943396226415,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 34,
+        "FIX_SQL_INJECTION": 26,
+        "FIX_SECURE_COOKIE": 34,
+        "FIX_COMMAND_INJECTION": 39,
+        "FIX_CODE_INJECTION": 34,
+        "FIX_RANDOM_BYTES": 31,
+        "VALIDATE": 26
+      }
+    }
+  },
+  {
+    "id": "test-rule_based-44",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  },
+  {
+    "id": "test-q_learning-44",
+    "metrics": {
+      "examples": 53,
+      "positives": 20,
+      "negatives": 33,
+      "treatable": 3,
+      "validated": 3,
+      "validated_correction_rate": 0.15,
+      "treatable_correction_rate": 1.0,
+      "unnecessary_change_rate": 0.0,
+      "functional_regression_rate": null,
+      "functional_verified_cases": 0,
+      "full_success_rate": null,
+      "mean_actions": 1.1132075471698113,
+      "mean_reward": -0.5471698113207547,
+      "unsupported": 17,
+      "unseen_state_actions": 0,
+      "actions": {
+        "STOP": 53,
+        "FIX_SQL_INJECTION": 1,
+        "VALIDATE": 3,
+        "FIX_SECURE_COOKIE": 2
+      }
+    }
+  }
+]

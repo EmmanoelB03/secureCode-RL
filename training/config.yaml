@@ -1,0 +1,17 @@
+alpha: 0.1
+gamma: 0.95
+epsilon: 1.0
+epsilon_min: 0.05
+epsilon_decay: 0.995
+episodes: 10000
+seeds: [42, 43, 44]
+max_steps: 6
+rewards:
+  validated: 10
+  complete: 15
+  functional: 3
+  incompatible: -5
+  regression: -12
+  unnecessary: -6
+  unfinished: -8
+  cost: -1
