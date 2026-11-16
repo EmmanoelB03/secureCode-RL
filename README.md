@@ -197,3 +197,24 @@ Dataset: https://github.com/OWASP-Benchmark/BenchmarkPython, commit
 com seu cabeçalho original. A licença GPL-3.0 do benchmark foi preservada em
 `frontend/static/OWASP-LICENSE.txt`; os arquivos brutos conservam a licença original.
 Mapeamento OWASP: https://top10.owasp.org/2025/A05_2025-Injection/.
+
+## Classificação supervisionada experimental
+
+A análise agora inclui uma previsão por arquivo, separada dos indícios AST/Bandit.
+As correções continuam selecionadas pelo Q-Learning; o classificador não gera patches.
+Instale as dependências adicionais e reproduza a seleção do modelo:
+
+```bash
+.venv/bin/pip install -r requirements.supervised.txt
+.venv/bin/python training/fit_supervised.py
+```
+
+O modelo é escolhido somente na validação demonstrativa, depois reajustado em
+train+validation. O teste não participa dessa seleção. Reinicie a API ao substituir
+artefatos. `model.joblib` é um artefato confiável gerado localmente; não carregue
+arquivos de modelo de terceiros. Metadados conferem versão, integridade e código de
+pré-processamento. Se indisponível, a API mantém a análise estática e informa a falha.
+
+Ver [resultados supervisionados](docs/supervised-results.md) e
+[roteiro de apresentação](docs/apresentacao.md). A avaliação é exploratória:
+ausência de previsão positiva não garante segurança.

@@ -49,7 +49,12 @@ def distribution():
 
 @app.post('/api/v1/analyze')
 def analyze_code(body: CodeRequest):
-    return {**analyze(body.code), 'bandit': bandit_scan(body.code),
+    from backend.app.analysis.classifier import classify
+    try:
+        classification = classify(body.code)
+    except (OSError, ValueError, KeyError, ImportError) as exc:
+        classification = {'status': 'unavailable', 'label': 'Classificador indisponível', 'notice': str(exc)}
+    return {**analyze(body.code), 'classification': classification, 'bandit': bandit_scan(body.code),
             'notice': 'Ausência de alertas não comprova que o código está seguro.'}
 
 

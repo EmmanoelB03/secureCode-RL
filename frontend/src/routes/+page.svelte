@@ -20,7 +20,7 @@
     } catch(e) { error = e instanceof Error ? e.message : String(e); } finally { busy = ''; }
   }
 </script>
-<section class="intro"><div><p class="eyebrow">01 / ANÁLISE ASSISTIDA</p><h1>Entenda o risco.<br/><span>Revise a correção.</span></h1><p class="lead">Inspecione código Python e acompanhe as decisões de uma política aprendida com exemplos públicos da OWASP.</p></div><aside class="scope"><span class="dot"></span> Análise estática<p>O código enviado é tratado como texto.<br/>Correções automáticas têm escopo limitado.</p><a href="/dashboard">Explorar os resultados reais ↗</a></aside></section>
+<section class="intro"><div><p class="eyebrow">01 / ANÁLISE ASSISTIDA</p><h1>Entenda o risco.<br/><span>Revise a correção.</span></h1><p class="lead">Classifique código Python, examine indícios estáticos e revise correções restritas. Modelos treinados em exemplos públicos da OWASP.</p></div><aside class="scope"><span class="dot"></span> Análise estática<p>O código enviado é tratado como texto.<br/>Correções automáticas têm escopo limitado.</p><a href="/dashboard">Explorar os resultados reais ↗</a></aside></section>
 <div class="workspace">
   <section class="panel editor-panel"><div class="panel-heading"><h2>Código de entrada</h2><span class="mono">PYTHON</span></div>
     <div class="editor-toolbar"><span>{code.split('\n').length} linhas</span><button class="text-button" onclick={sample} disabled={!!busy}>Carregar exemplo OWASP ↙</button></div>
@@ -31,13 +31,15 @@
     {#if error}<p class="error" role="alert">{error}</p>{/if}
     {#if !analysis && !repair}<div class="empty-state"><div class="empty-icon">⌕</div><h3>Comece com uma análise</h3><p>Os alertas, suas categorias e as decisões do agente aparecerão aqui.</p></div>{/if}
     {#if analysis}
+      {#if analysis.classification}<article class="finding"><h3>Classificação por IA</h3><p>{analysis.classification.label}</p><small>{analysis.classification.model || ""} · {analysis.classification.version || ""}</small><p class="notice">{analysis.classification.notice || ""}</p>{#if analysis.classification.status === "completed" && analysis.syntax_valid && analysis.classification.positive !== !!analysis.alerts.length}<p class="notice">O classificador e as regras AST divergem. Revise os indícios abaixo.</p>{/if}</article>{/if}
+      <h3>Indícios das regras AST</h3>
       {#if !analysis.syntax_valid}<p class="error">Sintaxe incompatível: {analysis.error}</p>{/if}
       {#each analysis.alerts as alert}<article class="finding"><div class="flex justify-between gap-2"><span class="status detected">Possível vulnerabilidade</span><span class="mono">L{alert.line}</span></div><h3>CWE-{alert.cwe} <span> / {alert.sink}</span></h3><p>{alert.owasp}</p><small>{alert.message}</small></article>{/each}
       {#if analysis.syntax_valid && !analysis.alerts.length}<p class="notice">Nenhum padrão conhecido foi detectado pelas regras AST.</p>{/if}
       <details><summary>Bandit · {analysis.bandit.results.length} alertas ({analysis.bandit.status})</summary>{#each analysis.bandit.results as finding}<p class="bandit-item">L{finding.line_number} · {finding.test_id} — {finding.issue_text}</p>{/each}</details>
       <p class="notice">{analysis.notice}</p>
     {/if}
-    {#if repair}<div class="repair-result"><span class="status {repair.status}">{labels[repair.status] || repair.status}</span><h3>Sequência escolhida pelo agente</h3><ol class="trace">{#each repair.actions as action, i}<li><span>{String(i+1).padStart(2,'0')}</span><div><strong>{action.action}</strong><small>{action.outcome}</small></div></li>{/each}</ol><p class="notice">{repair.notice}</p></div>{/if}
+    {#if repair}<div class="repair-result"><span class="status {repair.status}">{labels[repair.status] || repair.status}</span><h3>Correções selecionadas pelo Q-Learning</h3><ol class="trace">{#each repair.actions as action, i}<li><span>{String(i+1).padStart(2,'0')}</span><div><strong>{action.action}</strong><small>{action.outcome}</small></div></li>{/each}</ol><p class="notice">{repair.notice}</p></div>{/if}
   </section>
 </div>
 {#if repair}<section class="panel diff"><div class="panel-heading"><h2>Revisão das alterações</h2><span class="badge">Original ↔ Proposta</span></div><div class="diff-grid"><div><h3>Original</h3><pre>{repair.original}</pre></div><div><h3>Resultado da política</h3><pre>{repair.modified}</pre></div></div></section>{/if}

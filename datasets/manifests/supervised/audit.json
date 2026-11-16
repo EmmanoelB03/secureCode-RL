@@ -1,0 +1,231 @@
+{
+  "dataset_sha256": "ff1e8fecc04323b4d34f2452d176871654b1c4c0382839451594a4988051d379",
+  "examples": 454,
+  "labels": {
+    "False": 293,
+    "True": 161
+  },
+  "cwes": {
+    "89": 16,
+    "330": 326,
+    "614": 39,
+    "94": 53,
+    "78": 20
+  },
+  "syntax_errors": [
+    {
+      "id": "BenchmarkTest00945",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00946",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00947",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00948",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00949",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00950",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00951",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00952",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00953",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00954",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00955",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00956",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00957",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00958",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00959",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00960",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00961",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00962",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00963",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00964",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00965",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00966",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00967",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00968",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00969",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00970",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00971",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00972",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00980",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00981",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00986",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00987",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00988",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest00989",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    },
+    {
+      "id": "BenchmarkTest01219",
+      "line": 36,
+      "message": "f-string: expecting '}'"
+    }
+  ],
+  "comment_lines_by_label": {
+    "false": 0,
+    "true": 0
+  },
+  "docstrings_by_label": {
+    "false": 268,
+    "true": 151
+  },
+  "ast_name_count_by_label": {
+    "false": 10329,
+    "true": 5713
+  },
+  "exact_duplicate_groups": [],
+  "docstring_stripped_duplicate_groups": [],
+  "flow_groups": 26,
+  "fold_groups_verified": 4,
+  "illustrations": [
+    {
+      "id": "BenchmarkTest00011",
+      "cwe": 89,
+      "vulnerable": false,
+      "raw": "'''\nOWASP Benchmark for Python v0.1\n\nThis file is part of the Open Web Application Security Project (OWASP) Benchmark Project.\nFor details, please see https://owasp.org/www-project-benchmark.\n\nThe OWASP Benchmark is free software: you can redistribute it and/or modify it under the terms\nof the GNU General Public License as published by the Free Software Foundation, version 3.\n\nThe OWASP Benchmark is distributed in the hope that it will be useful, but WITHOUT ANY\nWARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\nPURPOSE. See the GNU General Public License for more details.\n\n  Author: Theo Cartsonis\n  Created: 2025\n'''\n\nfrom flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app)",
+      "cleaned": "from flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app):\n\n    @app.route('/benchmark/sqli-00/BenchmarkTest00011', methods=['GET'])\n    def BenchmarkTest00011_get():\n        response = make_response(render_template('web/sqli-00/BenchmarkTest00011.html'))\n        response.set_cookie('BenchmarkTest00011', 'bar', max_age=60 * 3, secure=True, path=request.path, domain='localhost')\n        return response\n        return BenchmarkTest00011_post()\n\n    @app.route('/benchmark/sqli-00/BenchmarkTest00011', methods=['POST'])\n    def BenchmarkTest00011_post():\n        RESPONSE = ''\n        import urllib.parse\n        param = urllib.parse.unquote_plus(request.cookies.get('BenchmarkTest00011', 'noCookieValueSupplied'))\n        "
+    },
+    {
+      "id": "BenchmarkTest00012",
+      "cwe": 89,
+      "vulnerable": false,
+      "raw": "'''\nOWASP Benchmark for Python v0.1\n\nThis file is part of the Open Web Application Security Project (OWASP) Benchmark Project.\nFor details, please see https://owasp.org/www-project-benchmark.\n\nThe OWASP Benchmark is free software: you can redistribute it and/or modify it under the terms\nof the GNU General Public License as published by the Free Software Foundation, version 3.\n\nThe OWASP Benchmark is distributed in the hope that it will be useful, but WITHOUT ANY\nWARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\nPURPOSE. See the GNU General Public License for more details.\n\n  Author: Theo Cartsonis\n  Created: 2025\n'''\n\nfrom flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app)",
+      "cleaned": "from flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app):\n\n    @app.route('/benchmark/sqli-00/BenchmarkTest00012', methods=['GET'])\n    def BenchmarkTest00012_get():\n        response = make_response(render_template('web/sqli-00/BenchmarkTest00012.html'))\n        response.set_cookie('BenchmarkTest00012', 'bar', max_age=60 * 3, secure=True, path=request.path, domain='localhost')\n        return response\n        return BenchmarkTest00012_post()\n\n    @app.route('/benchmark/sqli-00/BenchmarkTest00012', methods=['POST'])\n    def BenchmarkTest00012_post():\n        RESPONSE = ''\n        import urllib.parse\n        param = urllib.parse.unquote_plus(request.cookies.get('BenchmarkTest00012', 'noCookieValueSupplied'))\n        "
+    },
+    {
+      "id": "BenchmarkTest00025",
+      "cwe": 330,
+      "vulnerable": true,
+      "raw": "'''\nOWASP Benchmark for Python v0.1\n\nThis file is part of the Open Web Application Security Project (OWASP) Benchmark Project.\nFor details, please see https://owasp.org/www-project-benchmark.\n\nThe OWASP Benchmark is free software: you can redistribute it and/or modify it under the terms\nof the GNU General Public License as published by the Free Software Foundation, version 3.\n\nThe OWASP Benchmark is distributed in the hope that it will be useful, but WITHOUT ANY\nWARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR\nPURPOSE. See the GNU General Public License for more details.\n\n  Author: Theo Cartsonis\n  Created: 2025\n'''\n\nfrom flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app)",
+      "cleaned": "from flask import redirect, url_for, request, make_response, render_template\nfrom helpers.utils import escape_for_html\n\ndef init(app):\n\n    @app.route('/benchmark/weakrand-00/BenchmarkTest00025', methods=['GET'])\n    def BenchmarkTest00025_get():\n        response = make_response(render_template('web/weakrand-00/BenchmarkTest00025.html'))\n        response.set_cookie('BenchmarkTest00025', 'whatever', max_age=60 * 3, secure=True, path=request.path, domain='localhost')\n        return response\n        return BenchmarkTest00025_post()\n\n    @app.route('/benchmark/weakrand-00/BenchmarkTest00025', methods=['POST'])\n    def BenchmarkTest00025_post():\n        RESPONSE = ''\n        import urllib.parse\n        param = urllib.parse.unquote_plus(request.cookies.get('BenchmarkTest00025', 'noCookieValueSup"
+    }
+  ]
+}

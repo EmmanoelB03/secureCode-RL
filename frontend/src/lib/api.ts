@@ -7,7 +7,7 @@ export async function api<T>(path: string, code?: string): Promise<T> {
   return result as T;
 }
 export type Alert = { cwe: number; line: number; sink: string; message: string; owasp: string };
-export type Analysis = { alerts: Alert[]; syntax_valid: boolean; error: string | null; notice: string; bandit: { status: string; results: { test_id: string; issue_text: string; line_number: number }[] } };
+export type Analysis = { classification?: { status: string; label: string; positive?: boolean; model?: string; version?: string; notice?: string }; alerts: Alert[]; syntax_valid: boolean; error: string | null; notice: string; bandit: { status: string; results: { test_id: string; issue_text: string; line_number: number }[] } };
 export type Repair = { original: string; modified: string; status: string; notice: string; actions: { action: string; outcome: string; reward: number }[]; validation: { security_verified: boolean; functional_verified: boolean; scope: string } | null };
 export type Metrics = { examples: number; positives: number; treatable: number; validated: number; unsupported: number; mean_reward: number; mean_actions: number; unseen_state_actions: number; validated_correction_rate: number | null; treatable_correction_rate: number | null; unnecessary_change_rate: number | null; actions: Record<string, number> };
 export type Experiment = { id?: string; fold?: number; policy: string; seed: number; metrics: Metrics; by_cwe: Record<string, Metrics> };
