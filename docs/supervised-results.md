@@ -51,3 +51,24 @@ continua selecionando correções. A integração não equivale a confirmação 
 As pendências metodológicas listadas acima (similaridade aproximada e latência)
 continuam abertas; a integração substitui a antiga indicação de que API e frontend
 ainda não estavam implementados.
+
+## Comparação com MLP (exploratória, posterior)
+
+Script: `training/supervised_mlp.py --seeds ...` → `artifacts/supervised/mlp.json` (não altera `evaluation.json`;
+mescla sementes já executadas). Mesmos folds (hash conferido), mesma limpeza e mesmo TF-IDF. `MLPClassifier`
+com 64 neurônios ocultos, alpha em {1e-4, 1e-2, 1}, adam, 200 iterações, sementes 42/43/44.
+Execução curta: três configurações (as famílias lineares tiveram seis); 22 dos 24 ajustes finais atingiram o
+limite de iterações sem convergência formal. Adicionado após os resultados lineares serem conhecidos.
+Tempo observado: ~10 min (semente 42) e ~8 min (sementes 43 e 44 juntas) em 8 núcleos.
+
+| Representação | Política | Precision | Recall | F1 positivo | FP | FN |
+|---|---|---:|---:|---:|---:|---:|
+| raw | mlp (média ± DP, 3 sementes) | 0.8462 ± 0.0015 | 0.6832 ± 0.0203 | 0.7558 ± 0.0118 | 20,0 | 51,0 |
+| cleaned | mlp (média ± DP, 3 sementes) | 0.8911 ± 0.0031 | 0.9317 ± 0.0088 | 0.9109 ± 0.0054 | 18,3 | 11,0 |
+| cleaned | linearsvc (referência, determinístico) | 0.8701 | 0.9565 | 0.9112 | 23 | 7 |
+
+F1 do MLP limpo por semente: 0,918 / 0,906 / 0,909. A vantagem observada só na semente 42 desaparece
+na média: MLP e LinearSVC empatam em F1 no código limpo. O MLP tem menos falsos positivos (≈18 contra 23) e
+mais falsos negativos (11 contra 7). McNemar MLP × LinearSVC por semente: p = 0,66 / 1,00 / 1,00.
+No código bruto o MLP perde recall (0,68). A aplicação continua servindo o LinearSVC.
+Resultados exibidos na aba Experimentos (`GET /api/v1/model/supervised`).

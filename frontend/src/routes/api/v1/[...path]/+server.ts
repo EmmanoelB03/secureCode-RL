@@ -4,7 +4,7 @@ import type { RequestHandler } from './$types';
 
 const proxy: RequestHandler = async ({ params, request, fetch }) => {
   const path = params.path ?? '';
-  const reads = /^(health|dataset\/(info|distribution)|model\/(info|metrics)|experiments(?:\/[a-z0-9-]+)?)$/;
+  const reads = /^(health|dataset\/(info|distribution)|model\/(info|metrics|supervised)|experiments(?:\/[a-z0-9-]+)?)$/;
   const writes = /^(analyze|repair)$/;
   if (!(request.method === 'GET' ? reads : writes).test(path)) return json({ detail: 'Rota desconhecida.' }, { status: 404 });
   try {

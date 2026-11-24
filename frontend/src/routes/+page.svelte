@@ -5,7 +5,24 @@
   let repair = $state<Repair | null>(null);
   let busy = $state('');
   let error = $state('');
-  const labels: Record<string,string> = { validated: 'Propriedade local validada', proposed: 'Correção proposta', unverified: 'Correção não verificada', unsupported: 'Sem correção automática suportada' };
+  const labels: Record<string,string> = { validated: 'Propriedade local validada', proposed: 'Correção proposta', unverified: 'Correção não verificada', partial: 'Correção parcial — revise os itens restantes', unsupported: 'Nenhuma correção automática aplicável' };
+  type Line = { text: string; kind: 'same' | 'del' | 'add' };
+  function diffLines(a: string, b: string): { left: Line[]; right: Line[] } {
+    const x = a.split('\n'), y = b.split('\n');
+    const n = x.length, m = y.length;
+    const lcs = Array.from({ length: n + 1 }, () => new Array<number>(m + 1).fill(0));
+    for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+      lcs[i][j] = x[i] === y[j] ? lcs[i + 1][j + 1] + 1 : Math.max(lcs[i + 1][j], lcs[i][j + 1]);
+    const left: Line[] = [], right: Line[] = [];
+    let i = 0, j = 0;
+    while (i < n || j < m) {
+      if (i < n && j < m && x[i] === y[j]) { left.push({ text: x[i++], kind: 'same' }); right.push({ text: y[j++], kind: 'same' }); }
+      else if (j < m && (i >= n || lcs[i][j + 1] >= lcs[i + 1][j])) right.push({ text: y[j++], kind: 'add' });
+      else left.push({ text: x[i++], kind: 'del' });
+    }
+    return { left, right };
+  }
+  let diff = $derived(repair && repair.changed ? diffLines(repair.original, repair.modified) : null);
   function edited() { analysis = null; repair = null; error = ''; }
   async function sample() {
     busy = 'sample'; error = '';
@@ -39,8 +56,9 @@
       <details><summary>Bandit · {analysis.bandit.results.length} alertas ({analysis.bandit.status})</summary>{#each analysis.bandit.results as finding}<p class="bandit-item">L{finding.line_number} · {finding.test_id} — {finding.issue_text}</p>{/each}</details>
       <p class="notice">{analysis.notice}</p>
     {/if}
-    {#if repair}<div class="repair-result"><span class="status {repair.status}">{labels[repair.status] || repair.status}</span><h3>Correções selecionadas pelo Q-Learning</h3><ol class="trace">{#each repair.actions as action, i}<li><span>{String(i+1).padStart(2,'0')}</span><div><strong>{action.action}</strong><small>{action.outcome}</small></div></li>{/each}</ol><p class="notice">{repair.notice}</p></div>{/if}
+    {#if repair}<div class="repair-result"><span class="status {repair.status}">{labels[repair.status] || repair.status}</span><h3>Ações do agente (Q-Learning) e das regras gerais</h3><ol class="trace">{#each repair.actions as action, i}<li><span>{String(i+1).padStart(2,'0')}</span><div><strong>{action.action}</strong><small>{action.source || 'Q-Learning'} · {action.outcome}</small>{#if action.detail}<small>{action.detail}</small>{/if}</div></li>{/each}</ol>{#if repair.unfixed?.length}<h3>Não corrigido automaticamente</h3>{#each repair.unfixed as item}<article class="finding"><div class="flex justify-between gap-2"><span class="status detected">CWE-{item.cwe}</span><span class="mono">L{item.line}</span></div><small>{item.reason}</small></article>{/each}{/if}{#if repair.alerts?.length}<p class="notice">Alertas restantes após a correção: {repair.alerts.map(a => `CWE-${a.cwe} (L${a.line})`).join(', ')}</p>{/if}<p class="notice">{repair.notice}</p></div>{/if}
   </section>
 </div>
-{#if repair}<section class="panel diff"><div class="panel-heading"><h2>Revisão das alterações</h2><span class="badge">Original ↔ Proposta</span></div><div class="diff-grid"><div><h3>Original</h3><pre>{repair.original}</pre></div><div><h3>Resultado da política</h3><pre>{repair.modified}</pre></div></div></section>{/if}
-<div class="scope-note"><strong>Escopo do experimento v2</strong><span>SQLite · Cookies Secure (exigem HTTPS) · Bytes aleatórios do SO.</span><span>Command / Code Injection: análise e abstenção.</span></div>
+{#if repair && !repair.changed}<section class="panel diff"><div class="panel-heading"><h2>Revisão das alterações</h2><span class="badge">Sem alterações</span></div><p class="notice">O código não foi modificado: nenhuma correção automática segura se aplica a ele. Veja ao lado os motivos e os alertas que exigem revisão manual.</p></section>{/if}
+{#if repair && repair.changed}<section class="panel diff"><div class="panel-heading"><h2>Revisão das alterações</h2><span class="badge">Original ↔ Proposta</span></div><div class="diff-grid"><div><h3>Original</h3><pre>{#each diff?.left ?? [] as line}<span class="line {line.kind}">{line.text || ' '}</span>{/each}</pre></div><div><h3>Código corrigido</h3><pre>{#each diff?.right ?? [] as line}<span class="line {line.kind}">{line.text || ' '}</span>{/each}</pre></div></div></section>{/if}
+<div class="scope-note"><strong>Escopo do experimento v2</strong><span>Q-Learning: SQLite · Cookies Secure (exigem HTTPS) · Bytes aleatórios do SO.</span><span>Regras gerais: SQL parametrizado · subprocess sem shell · ast.literal_eval · cookies Secure · SystemRandom; abstenção com motivo quando não há reescrita segura.</span></div>

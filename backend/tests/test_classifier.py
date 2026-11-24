@@ -27,3 +27,11 @@ def test_unavailable_model(monkeypatch):
         body=client.post('/api/v1/analyze',json={'code':'x = 1'}).json()
         assert body['classification']['status']=='unavailable'
         assert body['syntax_valid']
+
+def test_supervised_metrics_endpoint():
+    with TestClient(app) as client:
+        body=client.get('/api/v1/model/supervised').json()
+        assert body['examples']==454
+        policies={(r['representation'],r['policy']) for r in body['summary']}
+        assert ('cleaned','linearsvc') in policies and ('raw','ast_rules') in policies
+        assert all('predictions' not in f for f in body['fold_selection'])

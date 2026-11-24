@@ -25,8 +25,16 @@ def analyze(code: str):
                 cwe = 89
         elif name in {'exec', 'eval', 'builtins.exec', 'builtins.eval'}:
             cwe = 94
-        elif name in {'os.system', 'os.popen', 'subprocess.run', 'subprocess.call', 'subprocess.Popen', 'subprocess.check_output'}:
+        elif name in {'os.system', 'os.popen'}:
             cwe = 78
+        elif name in {'subprocess.run', 'subprocess.call', 'subprocess.Popen', 'subprocess.check_output', 'subprocess.check_call'}:
+            # An argv list without shell=True is not interpreted by a shell.
+            shell = any(k.arg == 'shell' and not (isinstance(k.value, ast.Constant) and k.value.value is False)
+                        for k in n.keywords)
+            explicit_no_shell = any(k.arg == 'shell' and isinstance(k.value, ast.Constant) and k.value.value is False
+                                    for k in n.keywords)
+            if shell or not (explicit_no_shell or (n.args and isinstance(n.args[0], (ast.List, ast.Tuple)))):
+                cwe = 78
         elif name.endswith('.set_cookie') and any(k.arg=='secure' and isinstance(k.value,ast.Constant) and k.value.value is False for k in n.keywords):
             cwe = 614
         elif name in {'random.random','random.randint','random.getrandbits','random.randbytes','random.normalvariate'}:
